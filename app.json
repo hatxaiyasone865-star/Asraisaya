@@ -3,19 +3,35 @@
     "name": "Asraisaya",
     "slug": "asraisaya",
     "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1a1a2e"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
     "assetBundlePatterns": [
       "**/*"
     ],
     "ios": {
       "supportsTabletMode": true,
-      "bundleIdentifier": "com.asraisaya.quiz"
+      "bundleIdentifier": "com.asraisaya.quiz",
+      "buildNumber": "1.0.0"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#1a1a2e"
       },
-      "package": "com.asraisaya.quiz"
+      "package": "com.asraisaya.quiz",
+      "versionCode": 1,
+      "permissions": [
+        "INTERNET",
+        "ACCESS_NETWORK_STATE"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -25,10 +41,18 @@
         "expo-build-properties",
         {
           "android": {
-            "usesCleartextTraffic": true
+            "usesCleartextTraffic": true,
+            "compileSdkVersion": 31,
+            "targetSdkVersion": 31,
+            "minSdkVersion": 21
+          },
+          "ios": {
+            "deploymentTarget": "12.0"
           }
         }
-      ]
-    ]
+      ],
+      "react-native-google-mobile-ads"
+    ],
+    "googleServicesFile": "./google-services.json"
   }
 }
